@@ -5,12 +5,29 @@ export const HeroStyle = styled.div`
   height: 85vh;
   background-color: black;
 
-  img {
+  .hero {
     width: 100%;
     height: 100%;
-    @media (max-width: 1023px) {
-      width: 100%;
-      object-fit: cover;
+    object-fit: cover;
+    object-position: left;
+    @media (max-width: 768px) {
+      display: none;
     }
+  }
+
+  .hero-mobile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    object-position: bottom;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 95vh;
   }
 `;
